@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: #241b00;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* Aseguramos que el contenido principal (login-section) ocupe el espacio disponible */
+main, .login-section {
+    flex: 1;  /* Hace que el contenido ocupe todo el espacio disponible */
+}
+
+/* ----------navbar---------- */
+.navbar-brand {
+    text-transform: uppercase;
+    font-size: 2rem !important; 
+    font-weight: bold; 
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+    background-color: #fbbf24; 
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar-icons i {
+    font-size: 1.4rem;
+    margin-right: 20px; 
+    color: #241b00; 
+}
+
+.dropdown-menu {
+    background-color: #fbbf24 !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f59e0b;
+    color: white;
+}
+
+/* ------main categorias------ */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.destacado {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+section.container {
+    padding: 30px;  
+}
+
+/* ------form ingresar------ */
+.login-section {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fbbf24;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    text-align: center;
+    color:#241b00;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 16px;
+    color: #241b00;
+    font-family: "Host Grotesk", sans-serif;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #f59e0b;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.remember-forgot label {
+    font-size: 14px;
+    color: #241b00;
+}
+
+.remember-forgot a {
+    font-size: 14px;
+    color: #241b00;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.boton-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: white;
+    color:#241b00;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+   background-color: #f59e0b;
+}
+
+.social-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-buttons h3 {
+    font-size: 16px;
+    color: #241b00;
+    margin-bottom: 5px;
+}
+
+.social-buttons button {
+    margin: 10px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 32px;
+    height: 32px;
+}
+
+.social-buttons button:hover {
+    background-color: #f59e0b;
+}
+
+.create-account {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.create-account p {
+    font-size: 14px;
+    color:#241b00;
+}
+
+.create-account a {
+    color:#241b00;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+.terminos {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #241b00;
+    text-align: center;
+}
+
+/* -------footer------ */
+footer {
+    background-color: #fbbf24;
+    color: #241b00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+    flex: 1;
+}
+
+footer .d-flex {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+footer .d-flex a {
+    color: #241b00;
+    font-size: 1.5rem;
+}

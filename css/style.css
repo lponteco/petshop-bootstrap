@@ -50,6 +50,8 @@ main, .login-section {
 }
 
 /* ------main categorias------ */
+
+/* estilos para las tarjetas */
 .card {
     border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,18 +59,55 @@ main, .login-section {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.destacado {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
+/* estilo para las tarjetas de categorias */
+.category-card img {
+    max-width: 100%;
+    height: auto;
 }
+
+/* estilo cards destacados */
+.featured-card {
+    height: 300px; 
+    width: 250px; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.featured-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+}
+
+/* estilo imagen card destacadas */
+.featured-card .destacado {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 500px;
+}
+
+.featured-card h4 {
+    flex-shrink: 0; /* Evita que el título se deforme */
+    margin: 0; /* Elimina cualquier margen extra */
+    padding: 8px 0; /* Reduzco el espaciado superior e inferior del título */
+    overflow: hidden; /* Recorta el texto si es demasiado largo */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto se corta */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    font-size: 16px; /* Un tamaño de fuente adecuado */
+}
+
 
 section.container {
-    padding: 30px;  
+    padding: 30px;
 }
+
+
 
 /* ------form ingresar------ */
 .login-section {
@@ -144,14 +183,14 @@ input:focus {
 }
 
 button[type="submit"] {
-    padding: 10px;
+    padding: 8px;
     background-color: white;
     color:#241b00;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     border-radius: 4px;
     width: 100%;
-    max-width: 300px;
+    max-width: 150px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-transform: uppercase;
@@ -207,16 +246,95 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
+/* .password-container {
+    position: relative;
+} */
+
+.password-container input {
+    width: 100%;
+}
+
+
+
 .terminos {
     display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap: 10px;
+    justify-content: center;  
+    align-items: center;     
+    flex-wrap: wrap;          
     margin-top: 20px;
     font-size: 14px;
     color: #241b00;
-    text-align: center;
+    text-align: center;   
 }
+
+.terminos label {
+    font-size: 14px;
+    color: #241b00;
+    cursor: pointer;
+    margin-left: 5px; 
+}
+
+.terminos span {
+    font-size: 14px;
+    color: red;
+    display: none;  
+    margin-top: 5px;  
+    width: 100%;    
+    text-align: center; 
+}
+
+
+/* -------contacto------ */
+.contact{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fbbf24;
+    margin-bottom: 30px;
+}
+
+.contact form label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    font-size: 18px; 
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact form textarea {
+    min-height: 100px;
+}
+
+.contact form button {
+    max-width: 200px;
+    align-self: center;
+}
+
+.contact form input:focus, 
+.contact form textarea:focus {
+    border-color: #f59e0b; 
+    outline: none; 
+}
+
+
 
 /* -------footer------ */
 footer {
@@ -245,4 +363,215 @@ footer .d-flex {
 footer .d-flex a {
     color: #241b00;
     font-size: 1.5rem;
+}
+
+
+/* carrito */
+/* .cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cart-content {
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cart-content h3 {
+    margin-bottom: 20px;
+}
+
+#cart-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #fbbf24;
+    color: #241b00;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #e89e11;
+} */
+
+
+
+/* -------------darkmode---------- */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* navbar */
+body.dark-mode .navbar {
+    /* background-color: #121212; */
+
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar .navbar-brand,
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar .navbar-toggler-icon {
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar .navbar-toggler-icon {
+    background-color: #e0e0e0; 
+}
+
+/* dropdown menu */
+body.dark-mode .navbar .dropdown-menu {
+    background-color: #333 !important;
+}
+
+body.dark-mode .navbar .dropdown-item {
+    color: #e0e0e0; 
+}
+
+body.dark-mode .navbar .dropdown-item:hover {
+    background-color: #555;  
+    color: #e0e0e0;  
+}
+
+/* cards */
+body.dark-mode .featured-card {
+    background-color: #222;
+}
+
+body.dark-mode .card-body {
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+    color: #e0e0e0;
+}
+
+/* botones cards */
+body.dark-mode .card-btn {
+    background-color: #444;  
+    color: #e0e0e0;  
+    border: 1px solid #555;  
+}
+
+/* footer */
+body.dark-mode footer {
+    background-color: #333;
+    color: #e0e0e0;
+
+    /* background-color: #121212;
+    color: #e0e0e0; */
+}
+
+/* cards hover effects */
+body.dark-mode .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* form contacto */
+body.dark-mode .contact form {
+    background-color: #333;
+}
+
+body.dark-mode .contact form input,
+body.dark-mode .contact form textarea {
+    background-color: #444;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+body.dark-mode .contact form label {
+    color: #e0e0e0;  
+}
+
+/* login y registro */
+body.dark-mode .login-section {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode p {
+    color: #e0e0e0
+}
+
+body.dark-mode .remember-forgot a,
+body.dark-mode .create-account a {
+    color: #e0e0e0;  
+}
+
+body.dark-mode .social-buttons h3 {
+    color: #e0e0e0;  
+}
+
+body.dark-mode .form-group label,
+body.dark-mode .remember-forgot label {
+    color: #e0e0e0;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #444;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+body.dark-mode .terminos label {
+    color: #e0e0e0; 
+}
+
+
+/* -------------------- */
+
+/* botones en modo oscuro */
+body.dark-mode .btn {
+    background-color: #444 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #555;
+}
+
+/* iconos */
+body.dark-mode i {
+    color: #e0e0e0 !important;  
+}
+
+
+/* cambiar brillo */
+body.dark-mode .carousel  {
+    filter: brightness(0.7);
+}
+
+
+body.dark-mode .featured-card {
+    filter: brightness(0.7);
+}
+
+body.dark-mode .category-card {
+    filter: brightness(0.7);
 }

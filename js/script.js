@@ -36,59 +36,61 @@ document.getElementById("carousel").innerHTML = `
 
 document.getElementById("main").innerHTML = `
 <main>
-<section class="container mt-5">
-    <h2 class="text-center mb-4">Nuestras Categorías</h2>
-    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+    <section class="container mt-5">
 
-        <div class="col">
-            <div class="card category-card">
-                <a href="/perros.html">
-                    <img id="categoria1" src="./img/categorias/perrosok.jpg" class="card-img-top" alt="imagen de perro">
-                </a>
+           <h2 id="titulo-productos2">nuestras Categorias</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+
+            <div class="col">
+                <div class="category-card-main">
+                    <a href="/perros.html">
+                        <img id="categoria1" src="./img/categorias/perrosok.jpg" class="category-card-img" alt="imagen de perro">
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card category-card">
-                <a href="/gatos.html">
-                    <img id="categoria2" src="./img/categorias/gatoskaisa.jpg" class="card-img-top" alt="imagen de gato">
-                </a>
+            <div class="col">
+                <div class="category-card-main">
+                    <a href="/gatos.html">
+                        <img id="categoria2" src="./img/categorias/gatoskaisa.jpg" class="category-card-img" alt="imagen de gato">
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card category-card">
-                <a href="/avesyroedores.html">
-                    <img id="categoria3" src="./img/categorias/avesyroedores.jpg" class="card-img-top" alt="imagen de aves y roedores">
-                </a>
+            <div class="col">
+                <div class="category-card-main">
+                    <a href="/avesyroedores.html">
+                        <img id="categoria3" src="./img/categorias/avesyroedores.jpg" class="category-card-img" alt="imagen de aves y roedores">
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card category-card">
-                <a href="/peces.html">
-                    <img id="categoria4" src="./img/categorias/peces.jpg" class="card-img-top" alt="imagen de pez">
-                </a>
+            <div class="col">
+                <div class="category-card-main">
+                    <a href="/peces.html">
+                        <img id="categoria4" src="./img/categorias/peces.jpg" class="category-card-img" alt="imagen de pez">
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card category-card">
-                <a href="/otrasespecies.html">
-                    <img id="categoria5" src="./img/categorias/otrasespecies.jpg" class="card-img-top" alt="imagen de otras especies">
-                </a>
+            <div class="col">
+                <div class="category-card-main">
+                    <a href="/otrasespecies.html">
+                        <img id="categoria5" src="./img/categorias/otrasespecies.jpg" class="category-card-img" alt="imagen de otras especies">
+                    </a>
+                </div>
             </div>
-        </div>
 
-    </div>
-</section>
+        </div>
+    </section>
 </main>
 `;
 
 
 document.getElementById("contacto").innerHTML = `
 <section class="contact">
-<h2>Contacto</h2>
+   <h2 id="titulo-productos2">Contacto</h2>
 <a name="contact"></a>
 <form id="formRegistro" action="https://formspree.io/f/xzzbjlyr" method="POST">
   <label for="name">Nombre:</label>

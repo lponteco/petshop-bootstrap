@@ -2,7 +2,7 @@
       {
         "id": 1,
         "nombre": "Alimento Eukanuba para Perro Adulto Raza Pequeña - 1 Kg",
-        "precio": "$10.000",
+        "precio": 10000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Alimento Eukanuba para Perro Adulto Raza Pequeña - 1 Kg.webp",
         "botones": {
@@ -14,7 +14,7 @@
       {
         "id": 2,
         "nombre": "Alimento Excellent Formula para Perro Adulto - 20 Kg",
-        "precio": "$10.000",
+        "precio": 10000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Alimento Excellent Formula para Perro Adulto - 20 Kg.webp",
         "botones": {
@@ -26,7 +26,7 @@
       {
         "id": 3,
         "nombre": "Moisés Eterno Aqua",
-        "precio": "$12.000",
+        "precio": 12000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Moisés Eterno Aqua.webp",
         "botones": {
@@ -38,7 +38,7 @@
       {
         "id": 4,
         "nombre": "Bebedero Inoxidable Antideslizante Nova - 1,5 Litros",
-        "precio": "$8.000",
+        "precio": 8000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Bebedero Inoxidable Antideslizante Nova - 1,5 Litros.webp",
         "botones": {
@@ -50,7 +50,7 @@
       {
         "id": 5,
         "nombre": "Lata Oh my Dog Carne Adulto - 340 Gr",
-        "precio": "$3000",
+        "precio": 3000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Lata Oh my Dog Carne Adulto - 340 Gr.webp",
         "botones": {
@@ -62,7 +62,7 @@
       {
         "id": 6,
         "nombre": "Lata Oh My Dog Pollo Adulto - 340 Gr",
-        "precio": "$3000",
+        "precio": 3000,
         "categoria": "perros",
         "imagen": "./img/categorias/perrosproductos/Lata Oh my Dog Pollo y Zanahoria Adulto - 340 Gr.webp",
         "botones": {
@@ -74,7 +74,7 @@
       {
         "id": 7,
         "nombre": "Collar Regulable De Argentina Kika Dog - M",
-        "precio": "$5000",
+        "precio": 5000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Collar Regulable De Argentina Kika Dog - M.webp",
         "botones": {
@@ -86,8 +86,9 @@
       {
         "id": 8,
         "nombre": "Juguete Hueso con Soga CanCat Doble Nudo",
-        "precio": "$6000",
+        "precio": 6000,
         "categoria": "perros",
+        "destacado": true,
         "imagen": "../img/categorias/perrosproductos/Juguete Hueso con Soga CanCat Doble Nudo - 10.webp",
         "botones": {
           "decrease": "decrease-product8",
@@ -98,7 +99,7 @@
       {
         "id": 9,
         "nombre": "Soga CanCat Con Pelota Flotante",
-        "precio": "$4000",
+        "precio": 4000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Soga CanCat Con Pelota Flotante - 32 Cm.webp",
         "botones": {
@@ -110,7 +111,7 @@
       {
         "id": 10,
         "nombre": "Rollo Bolsitas Cancat - 3 Unid",
-        "precio": "$1000",
+        "precio": 1000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Rollo Bolsitas Cancat - 3 Unid..webp",
         "botones": {
@@ -122,7 +123,7 @@
       {
         "id": 11,
         "nombre": "Nexgard Para Perros Extra Grandes En Comprimidos - 25-50kg",
-        "precio": "$3000",
+        "precio": 3000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Nexgard Para Perros Extra Grandes En Comprimidos - 25-50kg.webp",
         "botones": {
@@ -134,7 +135,7 @@
       {
         "id": 12,
         "nombre": "Pipeta Antiparasitaria Protech Para Perros - Hasta 5Kg",
-        "precio": "$3000",
+        "precio": 3000,
         "categoria": "perros",
         "imagen": "../img/categorias/perrosproductos/Pipeta Antiparasitaria Protech Para Perros - Hasta 5Kg.webp",
         "botones": {
@@ -175,6 +176,7 @@
           "nombre": "Lata Oh my Cat Pollo Adulto - 340Gr",
           "precio": 2000,
           "categoria": "gatos",
+          "destacado": true,
           "imagen": "../img/categorias/gatos/Lata Oh my Cat Pollo Adulto - 340 Gr.webp",
           "botones": {
             "decrease": "decrease-product15",
@@ -424,6 +426,7 @@
           "nombre": "Conejera Y Cobayera Con Puerta Superior",
           "precio": 10000,
           "categoria": "avesyroedores",
+          "destacado": true,
           "imagen": "../img/categorias/avesyroedores/Conejera Y Cobayera Con Puerta Superior.webp",
           "botones": {
             "decrease": "decrease-product34",
@@ -466,6 +469,7 @@
           "nombre": "Shulet Agua Fria - 10 Gr",
           "precio": 2500,
           "categoria": "peces",
+          "destacado": true,
           "imagen": "../img/categorias/peces/Shulet Agua Fria - 10 Gr.webp",
           "botones": {
             "disminuir": "decrease-product37",

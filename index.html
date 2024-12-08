@@ -37,93 +37,10 @@
 
     <div id="main"></div>
 
-    <!-- ---------- destacados ----------- -->
-    <section class="container mt-5">
-        <h2 class="text-center mb-4">Productos Destacados</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-
-            <div class="col">
-                <div class="card featured-card text-center">
-                    <img src="../img/categorias/gatos/Lata Oh my Cat Salmón Adulto - 340 Gr.webp"
-                        class="card-img-top destacado" alt="Lata Oh my Cat Salmón">
-                    <div class="card-body">
-                        <h4 class="card-title" id="product-name1">Lata Oh my Cat Salmón Adulto - 340Gr</h4>
-                        <p class="card-text" id="price1">$2000</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn" onclick="updateQuantity(1, 'decrease')">-</button>
-                            <input type="number" id="quantity1" value="1" min="1" class="form-control mx-2"
-                                style="width: 60px; text-align: center;">
-                            <button class="btn" onclick="updateQuantity(1, 'increase')">+</button>
-                        </div>
-                        <a href="#" class="btn mt-2" style="background-color: #fbbf24; color: #241b00;"
-                            onclick="addToCart(1)">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card featured-card text-center">
-                    <img src="../img/categorias/perrosproductos/Juguete Hueso con Soga CanCat Doble Nudo - 10.webp"
-                        class="card-img-top destacado" alt="Juguete Hueso con Soga">
-                    <div class="card-body">
-                        <h4 class="card-title" id="product-name2">Juguete Hueso con Soga CanCat Doble Nudo</h4>
-                        <p class="card-text" id="price2">$6000</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn" onclick="updateQuantity(2, 'decrease')">-</button>
-                            <input type="number" id="quantity2" value="1" min="1" class="form-control mx-2"
-                                style="width: 60px; text-align: center;">
-                            <button class="btn" onclick="updateQuantity(2, 'increase')">+</button>
-                        </div>
-                        <a href="#" class="btn mt-2" style="background-color: #fbbf24; color: #241b00;"
-                            onclick="addToCart(2)">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-  
-            <div class="col">
-                <div class="card featured-card text-center">
-                    <img src="../img/categorias/peces/Shulet Agua Fria - 10 Gr.webp" class="card-img-top destacado"
-                        alt="Shulet Agua Fría">
-                    <div class="card-body">
-                        <h4 class="card-title" id="product-name3">Shulet Agua Fría - 10 Gr</h4>
-                        <p class="card-text" id="price3">$2500</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn" onclick="updateQuantity(3, 'decrease')">-</button>
-                            <input type="number" id="quantity3" value="1" min="1" class="form-control mx-2"
-                                style="width: 60px; text-align: center;">
-                            <button class="btn" onclick="updateQuantity(3, 'increase')">+</button>
-                        </div>
-                        <a href="#" class="btn mt-2" style="background-color: #fbbf24; color: #241b00;"
-                            onclick="addToCart(3) ">Comprar</a>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card featured-card text-center">
-                    <img src="../img/categorias/avesyroedores/Hamstera Millex 2 Pisos Con Rueda Y Bebedero - Único.webp"
-                        class="card-img-top destacado" alt="Hamstera Millex">
-                    <div class="card-body">
-                        <h4 class="card-title" id="product-name4">Hamstera Millex 2 Pisos Con Rueda Y Bebedero</h4>
-                        <p class="card-text" id="price4">$10000</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn" onclick="updateQuantity(4, 'decrease')">-</button>
-                            <input type="number" id="quantity4" value="1" min="1" class="form-control mx-2"
-                                style="width: 60px; text-align: center;">
-                            <button class="btn" onclick="updateQuantity(4, 'increase')">+</button>
-                        </div>
-                        <a href="#" class="btn mt-2" style="background-color: #fbbf24; color: #241b00;"
-                            onclick="addToCart(4)">Comprar</a>
-                            
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    <div id="productos-container">
+        <h2 id="titulo-productos2">Productos Destacados</h2>
+        <div id="productos-destacados"></div>
+    </div>
 
     <div id="contacto"></div>
 
@@ -134,6 +51,7 @@
         crossorigin="anonymous"></script>
 
     <script src="./js/headeryfooter.js"></script>
+    <script src="./js/cards.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/contact.js"></script>
     <script src="./js/darkmode.js"></script>

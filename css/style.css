@@ -11,39 +11,62 @@ body {
     color: #241b00;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
-
-/* Aseguramos que el contenido principal (login-section) ocupe el espacio disponible */
 
 main {
-    flex: 1; /* Elimina cualquier margen alrededor de estos elementos */
-    padding: 0;
+    flex: 1;
 }
 
-/* ----------navbar---------- */
 .navbar {
-    background-color: #fbbf24; 
+    background-color: #fbbf24;
     font-family: "Roboto", sans-serif;
+    align-items: center;
 }
 
 .navbar-brand {
     text-transform: uppercase;
-    font-size: 2rem !important; 
-    font-weight: bold; 
+    font-size: 2rem !important;
+    font-weight: bold;
     display: flex;
     align-items: center;
     font-family: "Montserrat", sans-serif;
 }
 
 .navbar-brand.mx-auto {
-    display: block; /* El logo se muestra normalmente en pantallas grandes */
+    display: block;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center; 
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center; 
+    margin-left: auto; 
+    height: 100%;
+}
+
+.navbar-icons a {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: #241b00;
+    text-decoration: none;
+    margin-right: 10px;
 }
 
 .navbar-icons i {
     font-size: 1.4rem;
-    margin-right: 20px; 
-    color: #241b00; 
+    color: #241b00;
+    margin-top: -15px; 
 }
 
 .dropdown-menu {
@@ -55,21 +78,69 @@ main {
     color: white;
 }
 
+/* ----------------------- */
 /* ------main categorias------ */
+.category-card-main {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* estilos para las tarjetas */
+.category-card-main h3 {
+    text-transform: uppercase; 
+    font-weight: bold; 
+}
 
+.category-card-main:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
 
+.category-card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
+/* cards de productos */
 
+#productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 50px;  
+    padding-right: 50px;
+}
 
+#productos-destacados-grid {
+    padding: 80px;
+    margin-top: -75px;
+}
 
-
-
+#productos-destacados {
+    margin-bottom: 0; 
+}
 
 .card {
     border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
 }
 
 .card:hover {
@@ -77,64 +148,124 @@ main {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* estilo para las tarjetas de categorias */
-.category-card img {
+.card-img {
     max-width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
-/* estilo cards destacados */
-.featured-card {
-    height: 300px; 
-    width: 250px; 
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; 
-}
-
-.featured-card .card-body {
+.card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; 
+    padding: 8px;
+    flex-grow: 1;
 }
 
-/* estilo imagen card destacadas */
-.featured-card .destacado {
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #241b00;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-category {
+    display: none;
+}
+
+#productos-destacados p {
+    display: none;
+}
+
+.card-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #241b00;
+    text-align: center;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px 8px 8px;
+}
+
+.card-buttons input::-webkit-outer-spin-button,
+.card-buttons input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.card-buttons .btn,
+.card-buttons button,
+.card-buttons a {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    background-color: #fbbf24;
+    color: #241b00;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.card-buttons a {
+    background-color: #fbbf24;
+    color: #241b00;
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-height: 500px;
+    padding: 10px 12px;
 }
 
-.featured-card h4 {
-    flex-shrink: 0; /* Evita que el título se deforme */
-    margin: 0; /* Elimina cualquier margen extra */
-    padding: 8px 0; /* Reduzco el espaciado superior e inferior del título */
-    overflow: hidden; /* Recorta el texto si es demasiado largo */
-    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto se corta */
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    font-size: 16px; /* Un tamaño de fuente adecuado */
+.card-buttons button {
+    font-size: 0.9rem;
+    width: 50px;
+    margin: 0 6px;
+    text-align: center;
+    padding: 8px;
 }
 
-section.container {
-    padding: 30px;
+.card-buttons input {
+    width: 25%;
+    padding: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
 }
 
+.card-buttons .btn:hover,
+.card-buttons button:hover {
+    background-color: #f59e0b;
+}
 
+.card-buttons a:hover {
+    color: #241b00;
+}
 
+#titulo-productos2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #241b00;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+#productos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    margin-bottom: 40px;
+}
 
 /* ------form ingresar------ */
 .login-section {
@@ -148,7 +279,7 @@ section.container {
 
 h3 {
     text-align: center;
-    color:#241b00;
+    color: #241b00;
     font-size: 24px;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -208,45 +339,15 @@ input:focus {
     margin-top: 20px;
 }
 
-button[type="submit"] {
-    padding: 8px;
-    background-color: white;
-    color:#241b00;
-    font-size: 18px;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 150px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-}
-
-/* button:disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
-}
-
-button.active {
-    background-color: white; 
-    color: #241b00;
-} */
-
-
-.error1 {
-    color: red;
-    font-size: 0.9rem;
-  }
-
-.social-buttons {
-    margin-top: 20px;
-    text-align: center;
-}
-
 .social-buttons h3 {
     font-size: 16px;
     color: #241b00;
     margin-bottom: 5px;
+}
+
+.social-buttons {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .social-buttons button {
@@ -272,11 +373,11 @@ button.active {
 
 .create-account p {
     font-size: 14px;
-    color:#241b00;
+    color: #241b00;
 }
 
 .create-account a {
-    color:#241b00;
+    color: #241b00;
     text-decoration: none;
 }
 
@@ -290,30 +391,40 @@ button.active {
 
 .terminos {
     display: flex;
-    justify-content: center;  
-    align-items: center;     
-    flex-wrap: wrap;          
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-top: 20px;
-    color: red;
+    color: #870000;
     font-size: 0.9rem;
-    text-align: center;   
+    text-align: center;
+}
+
+.error1 {
+    color: #870000;
+    font-size: 0.9rem;
 }
 
 .terminos label {
     font-size: 1rem;
     color: #241b00;
     cursor: pointer;
-    margin-left: 5px; 
+    margin-left: 5px;
 }
 
 
 /* -------contacto------ */
-.contact{
-    padding-top: 20px;
+.contact {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: -75px;
+}
+
+.contact h2 {
+    text-transform: uppercase; 
+font-weight: bold;
 }
 
 .contact form {
@@ -337,7 +448,7 @@ button.active {
 .contact form input,
 .contact form textarea {
     padding: 10px;
-    font-size: 18px; 
+    font-size: 18px;
     border-radius: 5px;
     width: 100%;
 }
@@ -351,10 +462,10 @@ button.active {
     align-self: center;
 }
 
-.contact form input:focus, 
+.contact form input:focus,
 .contact form textarea:focus {
-    border-color: #f59e0b; 
-    outline: none; 
+    border-color: #f59e0b;
+    outline: none;
 }
 
 /* restablecer contra */
@@ -372,37 +483,37 @@ button.active {
     text-align: center;
     color: #241b00;
     font-size: 24px;
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .restablecer p {
     text-align: center;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
     font-size: 16px;
 }
 
 .restablecer form {
     display: flex;
     flex-direction: column;
-    gap: 5px; 
-    padding-bottom: 5px;  
+    gap: 5px;
+    padding-bottom: 5px;
 }
 
 .restablecer label {
-    font-size: 16px; 
+    font-size: 16px;
     color: #241b00;
-    margin-bottom: 2px; 
+    margin-bottom: 2px;
 }
 
 .restablecer input[type="email"] {
-    padding: 8px; 
+    padding: 8px;
     font-size: 14px;
     border: 1px solid white;
     border-radius: 4px;
     outline: none;
     box-sizing: border-box;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .restablecer input:focus {
@@ -413,16 +524,16 @@ button.active {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 5px; 
+    margin-top: 5px;
 }
 
 button[type="submit"] {
     background-color: white;
     color: #241b00;
-    font-size: 14px;  
+    font-size: 14px;
     border: none;
     border-radius: 4px;
-    width: 150px; 
+    width: 150px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-transform: uppercase;
@@ -434,7 +545,7 @@ button[type="submit"] {
     color: #241b00;
     text-decoration: none;
     text-align: center;
-    margin-top: 15px; 
+    margin-top: 15px;
     cursor: pointer;
 }
 
@@ -451,10 +562,10 @@ button[type="submit"] {
 footer {
     background-color: #fbbf24;
     color: #241b00;
-    width: 100%; /* Ocupa todo el ancho de la página */
+    width: 100%;
     padding: 10px 20px;
     text-align: center;
-    margin-top: auto; /* Esto empuja el footer al fondo de la página */
+    margin-top: auto;
 }
 
 footer p {
@@ -528,12 +639,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
 /* --------------modo oscuro-------------- */
 
 body.dark-mode {
@@ -581,10 +686,13 @@ body.dark-mode .card-body {
     color: #e0e0e0;
 }
 
-body.dark-mode .card-title,
-body.dark-mode .card-text {
-    color: #e0e0e0;
-}
+body.dark-mode #titulo-productos2 {
+    color: white;  
+  }
+
+  body.dark-mode .card-price {
+    color: black;
+  }
 
 /* botones de las cards */
 body.dark-mode .btn {
@@ -666,66 +774,40 @@ body.dark-mode i {
     color: #e0e0e0 !important;
 }
 
-/* CAMBIAR BRILLO */
-/* body.dark-mode .carousel {
-    filter: brightness(0.7);
-}
-
-body.dark-mode .featured-card {
-    filter: brightness(0.7);
-}
-
-body.dark-mode .category-card {
-    filter: brightness(0.7);
-} */
-
 body.dark-mode #carouselImg1 {
-    content: url('../img/carousel/homedark.jpg'); /* Cambiar imagen en modo oscuro */
+    content: url('../img/carousel/homedark.jpg');
 }
 
 body.dark-mode #carouselImg2 {
     content: url('../img/carousel/cuotasdark.jpg');
 }
 
-/* Ocultar flechas en Chrome, Safari y Edge */
-/* input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-} */
-
-/* Ocultar flechas en Firefox */
-/* input[type="number"] {
-    -moz-appearance: textfield;
-} */
-
-
 body.dark-mode #carouselImg3 {
     content: url('../img/carousel/enviosdark.jpg');
 }
 
 body.dark-mode #categoria1 {
-    content: url('../img/categorias/perrosdark.jpg'); /* Cambiar imagen en modo oscuro */
+    content: url('../img/categorias/perrosdark.jpg');
 }
 
 body.dark-mode #categoria2 {
-    content: url('../img/categorias/gatosdark.jpg'); /* Cambiar imagen en modo oscuro */
+    content: url('../img/categorias/gatosdark.jpg');
 }
 
 body.dark-mode #categoria3 {
-    content: url('../img/categorias/avesdark.jpg'); /* Cambiar imagen en modo oscuro */
+    content: url('../img/categorias/avesdark.jpg');
 }
 
 body.dark-mode #categoria4 {
-    content: url('../img/categorias/pecesdark.jpg'); /* Cambiar imagen en modo oscuro */
+    content: url('../img/categorias/pecesdark.jpg');
 }
 
 body.dark-mode #categoria5 {
-    content: url('../img/categorias/otrosdark.jpg'); /* Cambiar imagen en modo oscuro */
+    content: url('../img/categorias/otrosdark.jpg');
 }
 
 body.dark-mode #logodark {
-    content: url('../img/logodark.png'); /* Cambiar imagen en modo oscuro */
+    content: url('../img/logodark.png');
 }
 
 body.dark-mode .restablecer {
@@ -755,16 +837,6 @@ body.dark-mode .restablecer input:focus {
     border-color: #e0e0e0;
 }
 
-body.dark-mode .boton-reestablecer button[type="submit"] {
-    background-color: #444;
-    color: #e0e0e0;
-    border: 1px solid #555;
-}
-
-body.dark-mode .boton-reestablecer button[type="submit"]:hover {
-    background-color: #555;
-}
-
 body.dark-mode .restablecer a {
     color: #e0e0e0;
 }
@@ -792,34 +864,27 @@ body.dark-mode .register-section textarea:focus {
 body.dark-mode .contact form button[type="submit"],
 body.dark-mode .login-section button[type="submit"],
 body.dark-mode .register-section button[type="submit"] {
-    background-color: #444;
-    color: #e0e0e0;
-    border: 1px solid #555;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-    padding: 10px;
-    box-sizing: border-box;
+    background-color: white; 
+    color: black; 
+    border: 1px solid #555; 
 }
 
-body.dark-mode .contact form button[type="submit"]:hover,
-body.dark-mode .login-section button[type="submit"]:hover,
-body.dark-mode .register-section button[type="submit"]:hover {
-    background-color: #555;
-}
 
 body.dark-mode .social-buttons button {
-    border-radius: 50%;
-    background-color: #444; 
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+    background-color: #e0e0e0; 
 }
 
 body.dark-mode .social-buttons button:hover {
-    background-color: #555;
+    background-color: #555; 
 }
 
+body.dark-mode .social-buttons button i {
+    color: #121212 !important;  
+}
+
+body.dark-mode .social-buttons button:hover i {
+    color: white !important;  
+}
 
 
 
@@ -828,23 +893,30 @@ body.dark-mode .social-buttons button:hover {
 /* Se oculta el logo en pantallas pequeñas */
 @media (max-width: 991px) {
     .navbar-brand.mx-auto {
-        display: none; /* El logo se oculta en pantallas pequeñas */
+        display: none;
+        /* El logo se oculta en pantallas pequeñas */
     }
 }
 
 /* Se oculta el icono de lupa y muestra el input de búsqueda en pantallas pequeñas */
 @media (max-width: 991px) {
     .navbar-icons .fa-magnifying-glass {
-        display: none; /* Se oculta el icono de lupa en pantallas pequeñas */
+        display: none;
+        /* Se oculta el icono de lupa en pantallas pequeñas */
     }
 
     .navbar-search {
-        display: block; /* Muestra el input de búsqueda */
+        display: block;
+        /* Muestra el input de búsqueda */
         position: absolute;
-        left: 50%; /* Centra el input de búsqueda */
-        transform: translateX(-50%); /* Ajusta el centrado */
-        width: 80%; /* Ajustamos el tamaño del input */
-        top: 15px; /* Ajustamos la posición */
+        left: 50%;
+        /* Centra el input de búsqueda */
+        transform: translateX(-50%);
+        /* Ajusta el centrado */
+        width: 80%;
+        /* Ajustamos el tamaño del input */
+        top: 15px;
+        /* Ajustamos la posición */
     }
 
     /* Asegurarse de que los iconos se mantengan a la derecha incluso en pantallas pequeñas */
@@ -852,8 +924,10 @@ body.dark-mode .social-buttons button:hover {
         position: absolute;
         right: 10px;
         top: 10px;
-        display: flex; /* Asegura que los iconos se alineen horizontalmente */
-        align-items: center; /* Alinea los iconos verticalmente */
+        display: flex;
+        /* Asegura que los iconos se alineen horizontalmente */
+        align-items: center;
+        /* Alinea los iconos verticalmente */
     }
 
     .navbar-icons a {
@@ -869,18 +943,21 @@ body.dark-mode .social-buttons button:hover {
 /* En pantallas grandes, el icono de lupa está presente y el input se oculta */
 @media (min-width: 992px) {
     .navbar-search {
-        display: none; /* Se oculta el input de búsqueda */
+        display: none;
+        /* Se oculta el input de búsqueda */
     }
 
     .navbar-icons .fa-magnifying-glass {
-        display: inline-block; /* Se muestra el icono de lupa */
+        display: inline-block;
+        /* Se muestra el icono de lupa */
     }
 
     .navbar-icons {
         position: absolute;
         right: 10px;
         top: 10px;
-        display: flex; /* Alinea los iconos a la derecha */
+        display: flex;
+        /* Alinea los iconos a la derecha */
         align-items: center;
     }
 

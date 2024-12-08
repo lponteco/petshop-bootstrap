@@ -1,60 +1,59 @@
-    const form = document.querySelector('form');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-    const emailError = document.getElementById('emailError');
-    const passwordError = document.getElementById('passwordError');
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formRegistro");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const btnEnviar = document.getElementById("btnEnviar");
+  
+    const errores = {
+      password: "La contraseña debe contener al menos 8 caracteres, una mayúscula, un número y un signo.",
+      email: "El correo debe ser válido (incluye '@' y '.').",
+    };
+  
+    const validarCampo = (campo, errorId, condicion, mensaje) => {
+      const error = document.getElementById(errorId);
+      if (condicion) {
+        error.innerText = mensaje;
+        return false;
+      } else {
+        error.innerText = "";
+        return true;
+      }
+    };
 
-    // Ocultar los mensajes de error inicialmente
-    emailError.style.display = 'none';
-    passwordError.style.display = 'none';
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evitar el envío del formulario para que no se recargue la página
-
-        let valid = true;
-
-        // Validación del correo
-        const email = emailInput.value.trim();
-        if (!email) {
-            emailError.textContent = "Ingrese su correo";
-            emailError.style.display = 'block';
-            valid = false;
-        } else if (!validateEmail(email)) {
-            emailError.textContent = "El correo debe contener un @ y un punto.";
-            emailError.style.display = 'block';
-            valid = false;
-        } else {
-            emailError.style.display = 'none';
-        }
-
-        // Validación de la contraseña
-        const password = passwordInput.value.trim();
-        if (!password) {
-            passwordError.textContent = "Ingrese su contraseña";
-            passwordError.style.display = 'block';
-            valid = false;
-        } else if (!validatePassword(password)) {
-            passwordError.textContent = "La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un carácter especial.";
-            passwordError.style.display = 'block';
-            valid = false;
-        } else {
-            passwordError.style.display = 'none';
-        }
-
-        // Si el formulario es válido, lo enviamos
-        if (valid) {
-            form.submit(); // Aquí enviamos el formulario si todo está bien
-        }
+    const validarFormulario = () => {
+      const emailValido = validarCampo(
+        email,
+        "errorEmail",
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value),
+        errores.email
+      );
+  
+      // validacion para la contraseña
+      const passwordValido = validarCampo(
+        password,
+        "errorPassword",
+        password.value.trim() === "" || 
+        !/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(password.value),
+        errores.password
+      );
+  
+      // Habilitar o deshabilitar el botón según los estados de los campos
+      const formularioValido = emailValido && passwordValido;
+  
+      btnEnviar.disabled = !formularioValido;
+  
+      if (formularioValido) {
+        btnEnviar.classList.add("active");
+      } else {
+        btnEnviar.classList.remove("active");
+      }
+    };
+  
+    // Escuchar cambios en todos los inputs y el checkbox
+    form.addEventListener("input", validarFormulario);
+  
+    // Controlar el envío del formulario
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
     });
-
-    // Función para validar el formato del correo electrónico
-    function validateEmail(email) {
-        const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return regex.test(email);
-    }
-
-    // Función para validar la contraseña
-    function validatePassword(password) {
-        const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-        return regex.test(password);
-    }
+  });

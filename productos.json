@@ -1,0 +1,654 @@
+ [
+      {
+        "id": 1,
+        "nombre": "Alimento Eukanuba para Perro Adulto Raza Pequeña - 1 Kg",
+        "precio": "$10.000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Alimento Eukanuba para Perro Adulto Raza Pequeña - 1 Kg.webp",
+        "botones": {
+          "decrease": "decrease-product1",
+          "increase": "increase-product1",
+          "quantity": "quantity-product1"
+        }
+      },
+      {
+        "id": 2,
+        "nombre": "Alimento Excellent Formula para Perro Adulto - 20 Kg",
+        "precio": "$10.000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Alimento Excellent Formula para Perro Adulto - 20 Kg.webp",
+        "botones": {
+          "decrease": "decrease-product2",
+          "increase": "increase-product2",
+          "quantity": "quantity-product2"
+        }
+      },
+      {
+        "id": 3,
+        "nombre": "Moisés Eterno Aqua",
+        "precio": "$12.000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Moisés Eterno Aqua.webp",
+        "botones": {
+          "decrease": "decrease-product3",
+          "increase": "increase-product3",
+          "quantity": "quantity-product3"
+        }
+      },
+      {
+        "id": 4,
+        "nombre": "Bebedero Inoxidable Antideslizante Nova - 1,5 Litros",
+        "precio": "$8.000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Bebedero Inoxidable Antideslizante Nova - 1,5 Litros.webp",
+        "botones": {
+          "decrease": "decrease-product4",
+          "increase": "increase-product4",
+          "quantity": "quantity-product4"
+        }
+      },
+      {
+        "id": 5,
+        "nombre": "Lata Oh my Dog Carne Adulto - 340 Gr",
+        "precio": "$3000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Lata Oh my Dog Carne Adulto - 340 Gr.webp",
+        "botones": {
+          "decrease": "decrease-product5",
+          "increase": "increase-product5",
+          "quantity": "quantity-product5"
+        }
+      },
+      {
+        "id": 6,
+        "nombre": "Lata Oh My Dog Pollo Adulto - 340 Gr",
+        "precio": "$3000",
+        "categoria": "perros",
+        "imagen": "./img/categorias/perrosproductos/Lata Oh my Dog Pollo y Zanahoria Adulto - 340 Gr.webp",
+        "botones": {
+          "decrease": "decrease-product6",
+          "increase": "increase-product6",
+          "quantity": "quantity-product6"
+        }
+      },
+      {
+        "id": 7,
+        "nombre": "Collar Regulable De Argentina Kika Dog - M",
+        "precio": "$5000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Collar Regulable De Argentina Kika Dog - M.webp",
+        "botones": {
+          "decrease": "decrease-product7",
+          "increase": "increase-product7",
+          "quantity": "quantity-product7"
+        }
+      },
+      {
+        "id": 8,
+        "nombre": "Juguete Hueso con Soga CanCat Doble Nudo",
+        "precio": "$6000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Juguete Hueso con Soga CanCat Doble Nudo - 10.webp",
+        "botones": {
+          "decrease": "decrease-product8",
+          "increase": "increase-product8",
+          "quantity": "quantity-product8"
+        }
+      },
+      {
+        "id": 9,
+        "nombre": "Soga CanCat Con Pelota Flotante",
+        "precio": "$4000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Soga CanCat Con Pelota Flotante - 32 Cm.webp",
+        "botones": {
+          "decrease": "decrease-product9",
+          "increase": "increase-product9",
+          "quantity": "quantity-product9"
+        }
+      },
+      {
+        "id": 10,
+        "nombre": "Rollo Bolsitas Cancat - 3 Unid",
+        "precio": "$1000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Rollo Bolsitas Cancat - 3 Unid..webp",
+        "botones": {
+          "decrease": "decrease-product10",
+          "increase": "increase-product10",
+          "quantity": "quantity-product10"
+        }
+      },
+      {
+        "id": 11,
+        "nombre": "Nexgard Para Perros Extra Grandes En Comprimidos - 25-50kg",
+        "precio": "$3000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Nexgard Para Perros Extra Grandes En Comprimidos - 25-50kg.webp",
+        "botones": {
+          "decrease": "decrease-product11",
+          "increase": "increase-product11",
+          "quantity": "quantity-product11"
+        }
+      },
+      {
+        "id": 12,
+        "nombre": "Pipeta Antiparasitaria Protech Para Perros - Hasta 5Kg",
+        "precio": "$3000",
+        "categoria": "perros",
+        "imagen": "../img/categorias/perrosproductos/Pipeta Antiparasitaria Protech Para Perros - Hasta 5Kg.webp",
+        "botones": {
+          "decrease": "decrease-product12",
+          "increase": "increase-product12",
+          "quantity": "quantity-product12"
+        }
+      },
+
+        {
+          "id": 13,
+          "nombre": "Alimento Excellent Pollo Y Arroz para Gato - 3Kg",
+          "precio": 10000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Alimento Excellent Pollo Y Arroz para Gato - 3 Kg.webp",
+          "botones": {
+            "decrease": "decrease-product13",
+            "increase": "increase-product13",
+            "quantity": "quantity-product13",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 14,
+          "nombre": "Alimento Royal Canin Kitten 36 - 1,5Kg",
+          "precio": 10000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Alimento Royal Canin Kitten 36 - 1,5 Kg.webp",
+          "botones": {
+            "decrease": "decrease-product14",
+            "increase": "increase-product14",
+            "quantity": "quantity-product14",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 15,
+          "nombre": "Lata Oh my Cat Pollo Adulto - 340Gr",
+          "precio": 2000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Lata Oh my Cat Pollo Adulto - 340 Gr.webp",
+          "botones": {
+            "decrease": "decrease-product15",
+            "increase": "increase-product15",
+            "quantity": "quantity-product15",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 16,
+          "nombre": "Lata Oh my Cat Salmón Adulto - 340Gr",
+          "precio": 2000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Lata Oh my Cat Salmón Adulto - 340 Gr.webp",
+          "botones": {
+            "decrease": "decrease-product16",
+            "increase": "increase-product16",
+            "quantity": "quantity-product16",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 17,
+          "nombre": "Comedero Bebedero Venere De Ceramica Para Gato - Mediano",
+          "precio": 2500,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Comedero Bebedero Venere De Ceramica Para Gato - Mediano.webp",
+          "botones": {
+            "decrease": "decrease-product17",
+            "increase": "increase-product17",
+            "quantity": "quantity-product17",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 18,
+          "nombre": "Bebedero Fuente Con Flor Catit Para Gatos - Blanco",
+          "precio": 12000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Bebedero Fuente Con Flor Catit Para Gatos - Blanco.webp",
+          "botones": {
+            "decrease": "decrease-product18",
+            "increase": "increase-product18",
+            "quantity": "quantity-product18",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 19,
+          "nombre": "Palita Sanitaria Pets",
+          "precio": 1000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Palita Sanitaria Pets.webp",
+          "botones": {
+            "decrease": "decrease-product19",
+            "increase": "increase-product19",
+            "quantity": "quantity-product19",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 20,
+          "nombre": "Bandeja Sanitaria Pets Plast Con Brillo",
+          "precio": 2000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Bandeja Sanitaria Pets Plast Con Brillo.webp",
+          "botones": {
+            "decrease": "decrease-product20",
+            "increase": "increase-product20",
+            "quantity": "quantity-product20",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 21,
+          "nombre": "Piedras Sanitarias Bentonita Lavanda Nelsoni Ranch - 4Kg",
+          "precio": 2000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Piedras Sanitarias Bentonita Lavanda Nelsoni Ranch - 4 Kg.webp",
+          "botones": {
+            "decrease": "decrease-product21",
+            "increase": "increase-product21",
+            "quantity": "quantity-product21",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 22,
+          "nombre": "Pipeta Holliday Ecthol GMP Para Gatos",
+          "precio": 6000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Pipeta Holliday Ecthol GMP Para Gatos.webp",
+          "botones": {
+            "decrease": "decrease-product22",
+            "increase": "increase-product22",
+            "quantity": "quantity-product22",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 23,
+          "nombre": "Juguete con Hierba Gatera Rascals Pack de Peces",
+          "precio": 2500,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Juguete con Hierba Gatera Rascals Pack de Peces.webp",
+          "botones": {
+            "decrease": "decrease-product23",
+            "increase": "increase-product23",
+            "quantity": "quantity-product23",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 24,
+          "nombre": "Transportadora Perro Y Gato Atlas 10 Trendy - Negro",
+          "precio": 15000,
+          "categoria": "gatos",
+          "imagen": "../img/categorias/gatos/Transportadora Perro Y Gato Atlas 10 Trendy - Negro.webp",
+          "botones": {
+            "decrease": "decrease-product24",
+            "increase": "increase-product24",
+            "quantity": "quantity-product24",
+            "comprar": "#"
+          }
+        },
+
+
+        {
+          "id": 25,
+          "nombre": "Alimento Mix Cobayos Nelsoni Ranch - 750 Gr",
+          "precio": 3000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Alimento Mix Cobayos Nelsoni Ranch - 750 Gr.webp",
+          "botones": {
+            "decrease": "decrease-product25",
+            "increase": "increase-product25",
+            "input": "quantity-product25",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 26,
+          "nombre": "Alimento Nelsoni Ranch Para Conejos - 750Gr",
+          "precio": 3000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Alimento Nelsoni Ranch Para Conejos - 750Gr.webp",
+          "botones": {
+            "decrease": "decrease-product26",
+            "increase": "increase-product26",
+            "input": "quantity-product26",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 27,
+          "nombre": "Alimento Para Aves Nelsoni Ranch Mijo - 750Gr",
+          "precio": 3000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Alimento Para Aves Nelsoni Ranch Mijo - 750Gr.webp",
+          "botones": {
+            "decrease": "decrease-product27",
+            "increase": "increase-product27",
+            "input": "quantity-product27",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 28,
+          "nombre": "Alimento Para Aves Nelsoni Ranch Mix Silvestre - 750Gr",
+          "precio": 3000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Alimento Para Aves Nelsoni Ranch Mix Silvestre - 750Gr.webp",
+          "botones": {
+            "decrease": "decrease-product28",
+            "increase": "increase-product28",
+            "input": "quantity-product28",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 29,
+          "nombre": "Alimento para Chinchillas Nelsoni Ranch - 750Gr",
+          "precio": 3000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Alimento para Chinchillas Nelsoni Ranch - 750Gr.webp",
+          "botones": {
+            "decrease": "decrease-product29",
+            "increase": "increase-product29",
+            "input": "quantity-product29",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 30,
+          "nombre": "Mix para Canarios Nelsoni Ranch - 750 Gr",
+          "precio": 3000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Mix para Canarios Nelsoni Ranch - 750 Gr.webp",
+          "botones": {
+            "decrease": "decrease-product30",
+            "increase": "increase-product30",
+            "input": "quantity-product30",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 31,
+          "nombre": "Mix para Loros Nelsoni Ranch - 600Gr",
+          "precio": 3000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Mix para Loros Nelsoni Ranch - 600Gr.webp",
+          "botones": {
+            "decrease": "decrease-product31",
+            "increase": "increase-product31",
+            "input": "quantity-product31",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 32,
+          "nombre": "Bebedero Millex con pico de Metal - 80ml",
+          "precio": 2000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Bebedero Millex con pico de Metal - 80ml.webp",
+          "botones": {
+            "decrease": "decrease-product32",
+            "increase": "increase-product32",
+            "input": "quantity-product32",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 33,
+          "nombre": "Comedero Millex Transparente - 10cm",
+          "precio": 2000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Comedero Millex Transparente - 10cm.webp",
+          "botones": {
+            "decrease": "decrease-product33",
+            "increase": "increase-product33",
+            "input": "quantity-product33",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 34,
+          "nombre": "Conejera Y Cobayera Con Puerta Superior",
+          "precio": 10000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Conejera Y Cobayera Con Puerta Superior.webp",
+          "botones": {
+            "decrease": "decrease-product34",
+            "increase": "increase-product34",
+            "input": "quantity-product34",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 35,
+          "nombre": "Hamstera Millex 2 Pisos Con Rueda Y Bebedero",
+          "precio": 10000,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Hamstera Millex 2 Pisos Con Rueda Y Bebedero - Único.webp",
+          "botones": {
+            "decrease": "decrease-product35",
+            "increase": "increase-product35",
+            "input": "quantity-product35",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 36,
+          "nombre": "Rueda Para Roedores Ferplast Blanca - 20,5Cm",
+          "precio": 1500,
+          "categoria": "avesyroedores",
+          "imagen": "../img/categorias/avesyroedores/Rueda Para Roedores Ferplast Blanca - 20,5Cm.webp",
+          "botones": {
+            "decrease": "decrease-product36",
+            "increase": "increase-product36",
+            "input": "quantity-product36",
+            "comprar": "#"
+          }
+        },
+
+
+
+        {
+          "id": 37,
+          "nombre": "Shulet Agua Fria - 10 Gr",
+          "precio": 2500,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Shulet Agua Fria - 10 Gr.webp",
+          "botones": {
+            "disminuir": "decrease-product37",
+            "aumentar": "increase-product37",
+            "cantidad": "quantity-product37",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 38,
+          "nombre": "Shulet Agua Tropical - 10 Gr",
+          "precio": 2500,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Shulet Tropical - 10 Gr.webp",
+          "botones": {
+            "disminuir": "decrease-product38",
+            "aumentar": "increase-product38",
+            "cantidad": "quantity-product38",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 39,
+          "nombre": "Alkaline Buffer Aquaz Evo - 70 g",
+          "precio": 4000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Alkaline Buffer Aquaz Evo - 70 g.webp",
+          "botones": {
+            "disminuir": "decrease-product39",
+            "aumentar": "increase-product39",
+            "cantidad": "quantity-product39",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 40,
+          "nombre": "Clarificador De Agua Clarity Seachem - 100 Ml",
+          "precio": 3000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Clarificador De Agua Clarity Seachem - 100 Ml.webp",
+          "botones": {
+            "disminuir": "decrease-product40",
+            "aumentar": "increase-product40",
+            "cantidad": "quantity-product40",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 41,
+          "nombre": "Regulador Aquaz Evo Alkaline - 250 g",
+          "precio": 4000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Regulador Aquaz Evo Alkaline - 250 g.webp",
+          "botones": {
+            "disminuir": "decrease-product41",
+            "aumentar": "increase-product41",
+            "cantidad": "quantity-product41",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 42,
+          "nombre": "Purigen Aborbente - 2000ml",
+          "precio": 4000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Purigen Aborbente - 2000ml.webp",
+          "botones": {
+            "disminuir": "decrease-product42",
+            "aumentar": "increase-product42",
+            "cantidad": "quantity-product42",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 43,
+          "nombre": "Aqua Plants Pennplax Pack - 30 cm",
+          "precio": 3000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Aqua Plants Pennplax Pack - 30 cm.webp",
+          "botones": {
+            "disminuir": "decrease-product43",
+            "aumentar": "increase-product43",
+            "cantidad": "quantity-product43",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 44,
+          "nombre": "Plant Air Pennplax Plástica",
+          "precio": 3000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Plant Air Pennplax Plástica.webp",
+          "botones": {
+            "disminuir": "decrease-product44",
+            "aumentar": "increase-product44",
+            "cantidad": "quantity-product44",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 45,
+          "nombre": "Adorno Nemo Pennplax en Anemona",
+          "precio": 3000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Adorno Nemo Pennplax en Anemona.webp",
+          "botones": {
+            "disminuir": "decrease-product45",
+            "aumentar": "increase-product45",
+            "cantidad": "quantity-product45",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 46,
+          "nombre": "Adorno Para Pecera Dragon Caballito De Mar",
+          "precio": 3000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Adorno Para Pecera Dragon Caballito De Mar - 18 Cm.webp",
+          "botones": {
+            "disminuir": "decrease-product46",
+            "aumentar": "increase-product46",
+            "cantidad": "quantity-product46",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 47,
+          "nombre": "Adorno Pennplax Tiburon Ballena",
+          "precio": 3000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Adorno Pennplax Tiburon Ballena.webp",
+          "botones": {
+            "disminuir": "decrease-product47",
+            "aumentar": "increase-product47",
+            "cantidad": "quantity-product47",
+            "comprar": "#"
+          }
+        },
+        {
+          "id": 48,
+          "nombre": "Red Pennplax para Peces 10 Rojo",
+          "precio": 4000,
+          "categoria": "peces",
+          "imagen": "../img/categorias/peces/Red Pennplax para Peces 10 Rojo.webp",
+          "botones": {
+            "disminuir": "decrease-product48",
+            "aumentar": "increase-product48",
+            "cantidad": "quantity-product48",
+            "comprar": "#"
+          }
+        },
+
+
+
+        {
+          "id": 49,
+          "nombre": "Alimento Tetra Repto Treat Gammarus - 10g",
+          "precio": 5500,
+          "categoria": "otrasespecies",
+          "imagen": "../img/categorias/otros/Alimento Tetra Repto Treat Gammarus - 10g.webp",
+          "botones": {
+            "decrease_id": "decrease-product49",
+            "increase_id": "increase-product49",
+            "quantity_id": "quantity-product49",
+            "comprar_href": "#"
+          }
+        },
+        {
+          "id": 50,
+          "nombre": "Viruta De Pino Prensado - 17 Lts",
+          "precio": 4500,
+          "categoria": "otrasespecies",
+          "imagen": "../img/categorias/otros/Viruta De Pino Prensado - 17 Lts.webp",
+          "botones": {
+            "decrease_id": "decrease-product50",
+            "increase_id": "increase-product50",
+            "quantity_id": "quantity-product50",
+            "comprar_href": "#"
+          }
+        }
+
+        
+
+      ]
+      
+  

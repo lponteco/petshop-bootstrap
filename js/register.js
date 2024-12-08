@@ -1,103 +1,94 @@
-    const form = document.querySelector('form');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-    const confirmPasswordInput = document.getElementById('confirm-password');
-    const termsInput = document.getElementById('terms');
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const passwordError = document.getElementById('passwordError');
-    const confirmPasswordError = document.getElementById('confirmPasswordError');
-    const termsError = document.getElementById('termsError');
-
-    // Ocultar los mensajes de error inicialmente
-    nameError.style.display = 'none';
-    emailError.style.display = 'none';
-    passwordError.style.display = 'none';
-    confirmPasswordError.style.display = 'none';
-    termsError.style.display = 'none';
-
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evitar el envío del formulario para que no se recargue la página
-
-        let valid = true;
-
-        // Validación del nombre
-        const name = nameInput.value.trim();
-        if (!name) {
-            nameError.textContent = "Ingrese su nombre";
-            nameError.style.display = 'block';
-            valid = false;
-        } else {
-            nameError.style.display = 'none';
-        }
-
-        // Validación del correo
-        const email = emailInput.value.trim();
-        if (!email) {
-            emailError.textContent = "Ingrese su correo";
-            emailError.style.display = 'block';
-            valid = false;
-        } else if (!validateEmail(email)) {
-            emailError.textContent = "El correo debe contener un @ y un punto.";
-            emailError.style.display = 'block';
-            valid = false;
-        } else {
-            emailError.style.display = 'none';
-        }
-
-        // Validación de la contraseña
-        const password = passwordInput.value.trim();
-        if (!password) {
-            passwordError.textContent = "Ingrese su contraseña";
-            passwordError.style.display = 'block';
-            valid = false;
-        } else if (!validatePassword(password)) {
-            passwordError.textContent = "La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un carácter especial.";
-            passwordError.style.display = 'block';
-            valid = false;
-        } else {
-            passwordError.style.display = 'none';
-        }
-
-        // Validación de la confirmación de la contraseña
-        const confirmPassword = confirmPasswordInput.value.trim();
-        if (!confirmPassword) {
-            confirmPasswordError.textContent = "Vuelva a ingresar su contraseña";
-            confirmPasswordError.style.display = 'block';
-            valid = false;
-        } else if (confirmPassword !== password) {
-            confirmPasswordError.textContent = "Las contraseñas no coinciden";
-            confirmPasswordError.style.display = 'block';
-            valid = false;
-        } else {
-            confirmPasswordError.style.display = 'none';
-        }
-
-        // Validación del checkbox de términos
-        if (!termsInput.checked) {
-            termsError.textContent = "Debe aceptar los términos y condiciones";
-            termsError.style.display = 'block';
-            valid = false;
-        } else {
-            termsError.style.display = 'none';
-        }
-
-        // Si el formulario es válido, lo enviamos
-        if (valid) {
-            form.submit(); // Aquí enviamos el formulario si todo está bien
-        }
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formRegistro");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const terminos = document.getElementById("terminos");
+    const btnEnviar = document.getElementById("btnEnviar");
+  
+    const errores = {
+      name: "El nombre no puede estar vacío.",
+      password: "La contraseña debe contener al menos 8 caracteres, una mayúscula, un número y un signo.",
+      email: "El correo debe ser válido (incluye '@' y '.').",
+      confirmPassword: "Las contraseñas deben coincidir.",
+      terminos: "Acepte los términos para continuar.",
+    };
+  
+    const validarCampo = (campo, errorId, condicion, mensaje) => {
+      const error = document.getElementById(errorId);
+      if (condicion) {
+        error.innerText = mensaje;
+        return false;
+      } else {
+        error.innerText = "";
+        return true;
+      }
+    };
+  
+    const validarFormulario = () => {
+      const nameValido = validarCampo(
+        name,
+        "errorName",
+        name.value.trim() === "",
+        errores.name
+      );
+  
+      const emailValido = validarCampo(
+        email,
+        "errorEmail",
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value),
+        errores.email
+      );
+  
+      // Validación de la contraseña
+      const passwordValido = validarCampo(
+        password,
+        "errorPassword",
+        password.value.trim() === "" ||
+        !/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(password.value),
+        errores.password
+      );
+  
+      // Validación de la confirmación de la contraseña
+      const confirmPasswordValido = validarCampo(
+        confirmPassword,
+        "errorConfirmPassword",
+        confirmPassword.value.trim() === "" || confirmPassword.value !== password.value,
+        errores.confirmPassword
+      );
+  
+      // Validación de los términos
+      const terminosValido = validarCampo(
+        terminos,
+        "errorTerminos",
+        !terminos.checked,
+        errores.terminos
+      );
+  
+      // Habilitar o deshabilitar el botón según los estados de los campos
+      const formularioValido =
+        nameValido &&
+        emailValido &&
+        passwordValido &&
+        confirmPasswordValido &&
+        terminosValido;
+  
+      btnEnviar.disabled = !formularioValido;
+  
+      if (formularioValido) {
+        btnEnviar.classList.add("active");
+      } else {
+        btnEnviar.classList.remove("active");
+      }
+    };
+  
+    // Escuchar cambios en todos los inputs y el checkbox
+    form.addEventListener("input", validarFormulario);
+    terminos.addEventListener("change", validarFormulario);
+  
+    // Controlar el envío del formulario
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
     });
-
-    // Función para validar el formato del correo electrónico
-    function validateEmail(email) {
-        const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return regex.test(email);
-    }
-
-    // Función para validar la contraseña
-    function validatePassword(password) {
-        const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-        return regex.test(password);
-    }
+  });

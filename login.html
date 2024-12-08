@@ -24,51 +24,56 @@
 
 <!-- ---------------------------- -->
 
+<main>
+
     <section class="login-section">
         <h3>Iniciar sesión</h3>
 
-        <form action="#" method="POST">
+        <form id="formRegistro" action="https://formspree.io/f/xzzbjlyr" method="POST">
             <div class="form-group">
                 <label for="email">Correo electrónico:</label>
                 <input type="text" id="email" name="email" placeholder="Introduce tu correo electrónico">
-                <span id="emailError" style="color: red; display: none;"></span>
-                
+                <p class="error1" id="errorEmail"></p>
+                <!-- <span id="emailError" style="color: red; display: none;"></span> -->
+        
                 <label for="password">Contraseña:</label>
                 <input type="text" id="password" name="password" placeholder="Introduce tu contraseña">
-                <span id="passwordError" style="color: red; display: none;"></span>
+                <p class="error1" id="errorPassword"></p>
+                <!-- <span id="passwordError" style="color: red; display: none;"></span> -->
             </div>
-
+        
             <div class="remember-forgot">
                 <label>
-                    <input type="checkbox" name="remember"> Recordarme
+                    <input type="checkbox" id="terminos" name="remember"> Recordarme
                 </label>
-
-                <a href="#">¿Olvidaste tu contraseña?</a>
+        
+                <a href="./reestablecer.html">¿Olvidaste tu contraseña?</a>
             </div>
-
+        
             <div class="boton-login">
-                <button type="submit">Entrar</button>
+                <button id="btnEnviar" type="submit" disabled>Entrar</button>
             </div>
-
+        
             <div class="social-buttons">
                 <h3>O ingresa con</h3>
-
                 <button onclick="window.location.href='https://www.facebook.com'">
                     <i class="fab fa-facebook-f"></i>
                 </button>
-    
                 <button onclick="window.location.href='https://www.google.com'">
                     <i class="fab fa-google"></i>
                 </button>
-
             </div>
-
+        
             <div class="create-account">
                 <p>¿Eres nuevo? <a href="./register.html">Crea tu cuenta</a></p>
             </div>
-
         </form>
+        
     </section>
+
+</main>
+
+
 
     <!-- ------footer------ -->
 
@@ -79,7 +84,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-        <script src="../js/script.js"></script>
+        <script src="./js/script.js"></script>
         <script src="./js/login.js"></script>
         <script src="./js/darkmode.js"></script>
     

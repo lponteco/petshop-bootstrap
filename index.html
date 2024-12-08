@@ -31,96 +31,11 @@
 
 <body>
 
-    <!-- header y nav -->
-
     <div id="header"></div>
 
+    <div id="carousel"></div>
 
-    <!------------ carousel---------- -->
-    <section>
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./img/carousel/carouselhome.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./img/carousel/carouselcuotas.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./img/carousel/carouselenvios.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
-        </div>
-    </section>
-
-    <!-- categorias -->
-    <main>
-        <section class="container mt-5">
-            <h2 class="text-center mb-4">Nuestras Categorías</h2>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
-
-                <div class="col">
-                    <div class="card category-card">
-                        <a href="./productos/perros.html">
-                            <img src="./img/categorias/perrosok.jpg" class="card-img-top" alt="imagen de perro">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card category-card">
-                        <a href="./productos/gatos.html">
-                            <img src="./img/categorias/gatoskaisa.jpg" class="card-img-top" alt="imagen de gato">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card category-card">
-                        <a href="./productos/avesyroedores.html">
-                            <img src="./img/categorias/avesyroedores.jpg" class="card-img-top"
-                                alt="imagen de aves y roedores">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card category-card">
-                        <a href="./productos/peces.html">
-                            <img src="./img/categorias/peces.jpg" class="card-img-top" alt="imagen de pez">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card category-card">
-                        <a href="./productos/otrasespecies.html">
-                            <img src="./img/categorias/otrasespecies.jpg" class="card-img-top" alt="imagen de">
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
+    <div id="main"></div>
 
     <!-- ---------- destacados ----------- -->
     <section class="container mt-5">
@@ -210,50 +125,15 @@
         </div>
     </section>
 
-
-
-    <section class="contact">
-        <h2>Contacto</h2>
-        <form action="https://formspree.io/f/xzzbjlyr" method="POST">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre">
-            <span id="nameError" style="color: red; display: none;"></span>
-
-            <label for="email">Correo electrónico:</label>
-            <input type="text" id="email" name="email" placeholder="Tu correo electrónico">
-            <span id="emailError" style="color: red; display: none;"></span>
-
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" placeholder="Escribí acá tu mensaje"></textarea>
-            <span id="messageError" style="color: red; display: none;"></span>
-
-
-            <button type="submit">Enviar</button>
-        </form>
-
-    </section>
-
-    <!-- ------footer------ -->
+    <div id="contacto"></div>
 
     <div id="footer"></div>
-
-    
-    <!-- carrito -->
-
-    <!-- <div id="cart-modal" class="cart-modal" style="display: none;">
-        <div class="cart-content">
-            <h3>Tu carrito</h3>
-            <div id="cart-container"></div>
-            <div id="cart-total"></div>
-            <button onclick="checkout()">Finalizar compra</button>
-            <button onclick="closeCart()">Cerrar</button>
-        </div>
-    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <script src="./js/headeryfooter.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/contact.js"></script>
     <script src="./js/darkmode.js"></script>

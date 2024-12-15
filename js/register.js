@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         errores.email
       );
   
-      // Validación de la contraseña
       const passwordValido = validarCampo(
         password,
         "errorPassword",
@@ -50,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
         errores.password
       );
   
-      // Validación de la confirmación de la contraseña
       const confirmPasswordValido = validarCampo(
         confirmPassword,
         "errorConfirmPassword",
@@ -58,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
         errores.confirmPassword
       );
   
-      // Validación de los términos
       const terminosValido = validarCampo(
         terminos,
         "errorTerminos",
@@ -66,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         errores.terminos
       );
   
-      // Habilitar o deshabilitar el botón según los estados de los campos
       const formularioValido =
         nameValido &&
         emailValido &&
@@ -83,11 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
   
-    // Escuchar cambios en todos los inputs y el checkbox
     form.addEventListener("input", validarFormulario);
     terminos.addEventListener("change", validarFormulario);
   
-    // Controlar el envío del formulario
+   
     form.addEventListener("submit", (e) => {
       e.preventDefault();
     });

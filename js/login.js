@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         errores.email
       );
   
-      // validacion para la contraseña
       const passwordValido = validarCampo(
         password,
         "errorPassword",
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         errores.password
       );
   
-      // Habilitar o deshabilitar el botón según los estados de los campos
       const formularioValido = emailValido && passwordValido;
   
       btnEnviar.disabled = !formularioValido;
@@ -49,10 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
   
-    // Escuchar cambios en todos los inputs y el checkbox
     form.addEventListener("input", validarFormulario);
   
-    // Controlar el envío del formulario
     form.addEventListener("submit", (e) => {
       e.preventDefault();
     });

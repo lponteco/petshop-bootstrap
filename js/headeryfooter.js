@@ -41,8 +41,8 @@ document.getElementById("header").innerHTML = `
 
             <div class="navbar-icons">
                 <a href="#" id="dark-mode-toggle"><i class="fa-solid fa-moon"></i></a>
-                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="#" onclick="openCart()"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
             </div>
 
         </div>

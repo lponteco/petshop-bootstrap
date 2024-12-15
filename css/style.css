@@ -39,7 +39,7 @@ main {
 
 .navbar-nav {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .navbar-nav .nav-item {
@@ -49,8 +49,8 @@ main {
 
 .navbar-icons {
     display: flex;
-    align-items: center; 
-    margin-left: auto; 
+    align-items: center;
+    margin-left: auto;
     height: 100%;
 }
 
@@ -66,7 +66,7 @@ main {
 .navbar-icons i {
     font-size: 1.4rem;
     color: #241b00;
-    margin-top: -15px; 
+    margin-top: -15px;
 }
 
 .dropdown-menu {
@@ -78,21 +78,39 @@ main {
     color: white;
 }
 
+
 /* ----------------------- */
-/* ------main categorias------ */
+.category-cards-container {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
+    padding: 0 10px; 
+}
+
+
+#titulo-productos3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #241b00;
+    margin-bottom: 12px;
+}
+
 .category-card-main {
     position: relative;
     width: 100%;
+    max-width: 300px; 
     height: auto;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.category-card-main h3 {
-    text-transform: uppercase; 
-    font-weight: bold; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .category-card-main:hover {
@@ -107,164 +125,143 @@ main {
     border-radius: 8px;
 }
 
-/* cards de productos */
+@media (max-width: 768px) {
+    .category-cards-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 
-#productos {
+    .category-card-main {
+        max-width: 250px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .category-cards-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .category-card-main {
+        max-width: 50%;
+        margin: 0 auto; 
+    }
+
+    #titulo-productos3 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #241b00;
+        margin-bottom: 12px;
+    }
+}
+
+
+/* ------------------productos---------------------- */
+
+.productos-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 10px;
     padding: 10px;
-    width: 100%;
-    margin-top: 10px;
-    padding-left: 50px;  
-    padding-right: 50px;
-}
-
-#productos-destacados-grid {
-    padding: 80px;
-    margin-top: -75px;
-}
-
-#productos-destacados {
-    margin-bottom: 0; 
-}
-
-.card {
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    height: 300px;
-    width: 100%;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.card-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 8px;
-    flex-grow: 1;
-}
-
-.card-title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #241b00;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.card-category {
-    display: none;
-}
-
-#productos-destacados p {
-    display: none;
-}
-
-.card-price {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #241b00;
-    text-align: center;
-}
-
-.card-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 8px 8px 8px;
-}
-
-.card-buttons input::-webkit-outer-spin-button,
-.card-buttons input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.card-buttons .btn,
-.card-buttons button,
-.card-buttons a {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    background-color: #fbbf24;
-    color: #241b00;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-}
-
-.card-buttons a {
-    background-color: #fbbf24;
-    color: #241b00;
-    width: 100%;
-    padding: 10px 12px;
-}
-
-.card-buttons button {
-    font-size: 0.9rem;
-    width: 50px;
-    margin: 0 6px;
-    text-align: center;
-    padding: 8px;
-}
-
-.card-buttons input {
-    width: 25%;
-    padding: 6px;
-    text-align: center;
-    font-size: 0.9rem;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-}
-
-.card-buttons .btn:hover,
-.card-buttons button:hover {
-    background-color: #f59e0b;
-}
-
-.card-buttons a:hover {
-    color: #241b00;
+    margin-top: 5px;
+    margin-left: 90px;
+    margin-right: 90px;
 }
 
 #titulo-productos2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #241b00;
-    padding-top: 20px;
     text-transform: uppercase;
+    color: #241b00;
+    margin-bottom: 1px;
+    grid-column: 1 / -1;
 }
 
-#productos-container {
+.titulo-container {
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+img.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+div.card-content {
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 0;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center;
+}
+
+div.card-price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #241b00;
+    margin: 8px 0;
+}
+
+div.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+button.card-button {
+    padding: 10px 20px;
+    background-color: #fbbf24;
+    color: #241b00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+}
+
+button.card-button:hover {
+    background-color: #f59e0b;
+}
+
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #titulo-productos2 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #241b00;
+        margin-bottom: 5px;
+        padding-top: 20px;
+    }
 }
 
 /* ------form ingresar------ */
@@ -419,12 +416,12 @@ input:focus {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: -75px;
+    margin-top: 20px;
 }
 
 .contact h2 {
-    text-transform: uppercase; 
-font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .contact form {
@@ -585,60 +582,6 @@ footer .d-flex a {
     font-size: 1.5rem;
 }
 
-
-/* carrito */
-/* .cart-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none; 
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.cart-content {
-    background-color: white;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.cart-content h3 {
-    margin-bottom: 20px;
-}
-
-#cart-container {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-}
-
-#cart-total {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    background-color: #fbbf24;
-    color: #241b00;
-    border-radius: 5px;
-}
-button:hover {
-    background-color: #e89e11;
-} */
-
-
-
 /* --------------modo oscuro-------------- */
 
 body.dark-mode {
@@ -687,18 +630,31 @@ body.dark-mode .card-body {
 }
 
 body.dark-mode #titulo-productos2 {
-    color: white;  
-  }
+    color: white;
+}
 
-  body.dark-mode .card-price {
+body.dark-mode #titulo-productos3 {
+    color: white;
+}
+
+body.dark-mode .card-price {
     color: black;
-  }
+}
 
 /* botones de las cards */
 body.dark-mode .btn {
     background-color: #444 !important;
     color: #e0e0e0 !important;
     border: 1px solid #555;
+}
+
+body.dark-mode button.card-button {
+    background-color: #121212; 
+    color: #e0e0e0; 
+}
+
+body.dark-mode button.card-button:hover {
+    background-color: #222; 
 }
 
 /* footer */
@@ -864,70 +820,43 @@ body.dark-mode .register-section textarea:focus {
 body.dark-mode .contact form button[type="submit"],
 body.dark-mode .login-section button[type="submit"],
 body.dark-mode .register-section button[type="submit"] {
-    background-color: white; 
-    color: black; 
-    border: 1px solid #555; 
+    background-color: white;
+    color: black;
+    border: 1px solid #555;
 }
 
 
 body.dark-mode .social-buttons button {
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
 }
 
 body.dark-mode .social-buttons button:hover {
-    background-color: #555; 
+    background-color: #555;
 }
 
 body.dark-mode .social-buttons button i {
-    color: #121212 !important;  
+    color: #121212 !important;
 }
 
 body.dark-mode .social-buttons button:hover i {
-    color: white !important;  
+    color: white !important;
 }
 
+/* -------------------------------------------------------------------------------------------- */
 
-
-
-
-/* Se oculta el logo en pantallas pequeñas */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     .navbar-brand.mx-auto {
-        display: none;
-        /* El logo se oculta en pantallas pequeñas */
+        display: none; 
     }
 }
 
-/* Se oculta el icono de lupa y muestra el input de búsqueda en pantallas pequeñas */
-@media (max-width: 991px) {
-    .navbar-icons .fa-magnifying-glass {
-        display: none;
-        /* Se oculta el icono de lupa en pantallas pequeñas */
-    }
-
-    .navbar-search {
-        display: block;
-        /* Muestra el input de búsqueda */
-        position: absolute;
-        left: 50%;
-        /* Centra el input de búsqueda */
-        transform: translateX(-50%);
-        /* Ajusta el centrado */
-        width: 80%;
-        /* Ajustamos el tamaño del input */
-        top: 15px;
-        /* Ajustamos la posición */
-    }
-
-    /* Asegurarse de que los iconos se mantengan a la derecha incluso en pantallas pequeñas */
+@media (max-width: 768px) {
     .navbar-icons {
         position: absolute;
         right: 10px;
         top: 10px;
-        display: flex;
-        /* Asegura que los iconos se alineen horizontalmente */
-        align-items: center;
-        /* Alinea los iconos verticalmente */
+        display: flex; 
+        align-items: center; 
     }
 
     .navbar-icons a {
@@ -936,28 +865,20 @@ body.dark-mode .social-buttons button:hover i {
     }
 
     .navbar-nav {
-        text-align: left;
+        text-align: left; 
     }
 }
 
-/* En pantallas grandes, el icono de lupa está presente y el input se oculta */
-@media (min-width: 992px) {
-    .navbar-search {
-        display: none;
-        /* Se oculta el input de búsqueda */
-    }
-
-    .navbar-icons .fa-magnifying-glass {
-        display: inline-block;
-        /* Se muestra el icono de lupa */
+@media (max-width: 480px) {
+    .navbar-brand.mx-auto {
+        display: none; 
     }
 
     .navbar-icons {
         position: absolute;
         right: 10px;
         top: 10px;
-        display: flex;
-        /* Alinea los iconos a la derecha */
+        display: flex; 
         align-items: center;
     }
 
@@ -965,4 +886,16 @@ body.dark-mode .social-buttons button:hover i {
         color: #e0e0e0;
         font-size: 1.5rem;
     }
+
+    .navbar-nav {
+        text-align: left !important; 
+    }
+}
+
+@media (max-width: 991px) {
+
+    .navbar-brand.mx-auto {
+        display: none;
+    }
+ 
 }
